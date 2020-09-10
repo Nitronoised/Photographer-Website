@@ -1,0 +1,60 @@
+.comments-box {
+  height: 90vh;
+  width: 95%;
+  margin: 50px auto;
+  @include flex-evenly(row);
+}
+.comment {
+  @include flex-evenly(column);
+  text-align: center;
+  width: 25%;
+  h2 {
+    font-size: 40px;
+    color: $secondary-color;
+
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 13px;
+    color: $faded;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin: 30px auto;
+  }
+  p {
+    font-size: 13px;
+    color: #555555;
+    letter-spacing: 2px;
+  }
+}
+.comment-banner {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #fafafa;
+  @include flex-evenly(column);
+  justify-content: center;
+}
+.big-comment {
+  @include flex-evenly(column);
+  width: 100%;
+  img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+  h4 {
+    color: #a5a5a5;
+    font-weight: 200;
+    font-size: 13px;
+    margin: 30px auto;
+    letter-spacing: 2px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #555555;
+    width: 55%;
+    font-weight: 400;
+  }
+}

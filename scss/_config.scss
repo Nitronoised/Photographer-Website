@@ -1,0 +1,37 @@
+@mixin flex-evenly($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin fixed-bg($bg) {
+  background-image: $bg;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@mixin debug {
+  outline: red solid 1px;
+}
+
+// Media query mixins
+@mixin mediaSm {
+  @media screen and (max-width: 670px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1636px) {
+    @content;
+  }
+}

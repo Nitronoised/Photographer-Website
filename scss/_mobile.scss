@@ -1,0 +1,207 @@
+@include mediaMd {
+  header {
+    height: 100px;
+    .head-wrap {
+      @include flex-evenly(row);
+      justify-content: space-between;
+      height: 100px;
+      width: 95%;
+      margin: 0 auto;
+
+      #menu-btn {
+        visibility: visible;
+      }
+    }
+    #nav-wrap {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  body {
+    .slideshow-container {
+      height: 90vh !important;
+    }
+    #img-lg {
+      height: 0 !important;
+    }
+    #img-md {
+      height: auto !important;
+    }
+    .video-bg {
+      @include fixed-bg(url(/dist/img/2..jpg));
+      video {
+        visibility: hidden;
+      }
+      .overlay-ad {
+        background-color: #141414a4;
+      }
+    }
+    .text-intro {
+      h2 {
+        width: 85%;
+      }
+    }
+    .offers {
+      width: 95%;
+    }
+    .banner {
+      width: 100%;
+      margin: 10vh 0;
+      h2 {
+        font-size: 2rem;
+      }
+      .img-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    //--------------------------About----------------
+    .about-elements {
+      width: 90%;
+      margin: 10vh auto;
+      grid-gap: 0;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "txt";
+      .para-title {
+        h1 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  //--------------------------Contact----------------
+  .contact-case {
+    .box-container {
+      flex-direction: column;
+      height: 200px;
+    }
+  }
+  //--------------------------Reviews----------------
+  .comments-box {
+    flex-direction: column;
+    height: 130vh;
+    .comment {
+      width: 95%;
+      margin: 40px auto;
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .comment-banner {
+    .big-comment {
+      h2 {
+        width: 90%;
+        font-size: 25px;
+      }
+    }
+  }
+  //--------------------------Prices----------------
+  .prices-container {
+    width: 100%;
+  }
+}
+
+@include mediaSm {
+  header {
+    height: 70px;
+    .head-wrap {
+      height: 70px;
+    }
+    .overlay {
+      .closebtn {
+        top: 0;
+        right: 15px;
+      }
+    }
+  }
+  body {
+    #img-md {
+      height: 0;
+    }
+    #img-sm {
+      height: 0;
+    }
+    .text-intro {
+      h2 {
+        font-size: 0.5;
+        width: 85%;
+      }
+    }
+    .video-bg {
+      .overlay-ad {
+        flex-direction: column;
+        justify-content: center;
+        hr {
+          visibility: hidden;
+        }
+      }
+    }
+    .offers {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      .offer {
+        text-align: center;
+      }
+    }
+    .banner {
+      margin: 0;
+      h2 {
+        text-align: center;
+        font-size: 25px;
+      }
+      h4 {
+        margin: 30px 0;
+      }
+    }
+    //--------------------------Reviews----------------
+    .comments-box {
+      margin: 100px auto;
+      width: 90%;
+      .comment {
+        h2 {
+          font-size: 25px;
+          width: 80%;
+        }
+      }
+    }
+    .comment-banner {
+      .big-comment {
+        height: 55%;
+      }
+    }
+    //--------------------------Contact---------------
+    .contact-case {
+      margin: 80px auto;
+      .box-container {
+        flex-direction: column;
+        height: 400px;
+        margin-top: 30px;
+      }
+    }
+    //--------------------------Prices----------------
+    .prices-container {
+      flex-direction: column;
+      .prices {
+        width: 90%;
+        margin: 50px auto;
+        .price-box {
+          width: 100%;
+        }
+      }
+    }
+    footer {
+      flex-direction: column;
+      height: 90vh;
+      margin-top: 10vh;
+    }
+  }
+}

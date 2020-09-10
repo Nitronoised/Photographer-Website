@@ -1,0 +1,474 @@
+@import "config";
+$primary-color: #ffffff;
+$secondary-color: #424242;
+$faded: #bdbdbd;
+$gray-bg: #f5f5f5;
+* {
+  margin: 0;
+  padding: 0;
+}
+#lg-text {
+  font-size: 25px;
+  color: $secondary-color;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#sm-text {
+  font-size: 15px;
+  color: $faded;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  .head-wrap {
+    width: 100%;
+    @include flex-evenly(row);
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    .logo {
+      height: 70px;
+      width: 140px;
+    }
+  }
+  #nav-wrap {
+    width: 100%;
+    @include flex-evenly(row);
+    justify-content: center;
+    background-color: $primary-color;
+    z-index: 1;
+
+    .nav {
+      @include flex-evenly(row);
+      width: 50%;
+      margin: 0 auto;
+      color: #494949;
+      padding: 12px 0;
+      .dot {
+        font-size: 8px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out;
+        color: #494949;
+        text-align: center;
+        margin: 0 17px;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      .dropdown {
+        float: left;
+        overflow: hidden;
+        &:hover {
+          cursor: pointer;
+        }
+        .dropdown-content {
+          display: block;
+          transition: all 0.4s ease;
+          position: absolute;
+          min-width: 110px;
+          padding-top: 17px;
+          z-index: 1;
+          background-color: $primary-color;
+          visibility: hidden;
+          opacity: 0;
+          a {
+            float: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 0.8rem;
+            display: block;
+            text-align: left;
+            transition: all 0.4s ease;
+            padding: 10px 0;
+            border-top: dotted 1px #a7a7a7;
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+      .dropdown:hover .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+      }
+      .dropdown:hover .dropdown-content a {
+        visibility: visible;
+      }
+    }
+  }
+  .sticky {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    @include flex-evenly(row);
+    margin: 0 auto;
+  }
+  // -------------------------------Curtain---------------------------
+  #menu-btn {
+    color: #494949;
+    font-size: 25px;
+    visibility: hidden;
+    font-weight: 100;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    left: 0;
+    top: 0;
+    /* Black fallback color */
+    background-color: #fafafa; /* Black w/opacity */
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #3d3d3d;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+    .dot {
+      font-size: 15px;
+      font-weight: 100;
+      margin-right: 5px;
+    }
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 23%; /* 25% from the top */
+    width: 115px; /* 100% width */
+    text-align: left; /* Centered text/links */
+    margin: 30px 0 0 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    .dropdown-c {
+      overflow: hidden;
+      .dropdown-content-c {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        transition: 0.4s ease-in-out;
+        height: 0;
+        padding-left: 5px;
+        a {
+          float: none;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 1.1rem;
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* The navigation links inside the overlay */
+
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #696969;
+    cursor: pointer;
+  }
+
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 5;
+    right: 10px;
+    font-size: 40px;
+    font-weight: 100;
+    color: #494949;
+  }
+
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+  /* The Overlay (background) */
+}
+body {
+  background-color: $primary-color;
+  font-family: Calibri;
+  .video-bg {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .overlay-ad {
+    width: 100%;
+    height: 80%;
+    background-color: #19191988;
+    position: absolute;
+    @include flex-evenly(row);
+    hr {
+      height: 100px;
+    }
+    h2 {
+      font-size: 3.8rem;
+      color: $primary-color;
+      font-weight: 100;
+      text-align: center;
+    }
+  }
+  .slideshow-container {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mySlides {
+      display: none;
+      padding-right: 0;
+    }
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .text-intro {
+    @include flex-evenly(column);
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #fafafa;
+    h3 {
+      color: #a7a7a7;
+      font-size: 12px;
+      letter-spacing: 4px;
+    }
+    h2 {
+      color: $secondary-color;
+      margin: 40px 0;
+      font-size: 25px;
+      letter-spacing: 2px;
+      width: 60%;
+      text-align: center;
+      color: #3d3d3d;
+      font-weight: 200;
+    }
+    img {
+      height: 150px;
+      width: 300px;
+    }
+  }
+  .offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    height: min-max(80vh, 120vh);
+    width: 85%;
+    margin: 25vh auto;
+    .offer {
+      text-align: left;
+      width: 100%;
+      display: grid;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+      h4 {
+        font-size: 21px;
+        color: $secondary-color;
+        letter-spacing: 2px;
+        font-weight: 200;
+        margin: 20px 0;
+      }
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  #arrow {
+    font-size: 17px;
+    margin: 0 10px;
+    color: inherit;
+  }
+  .banner {
+    @include flex-evenly(column);
+    width: 100%;
+    height: min-max(90vh, 100vh);
+    margin: 20vh 0;
+    h2 {
+      color: $secondary-color;
+      font-size: 40px;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+    h4 {
+      font-size: 16px;
+      color: $secondary-color;
+      letter-spacing: 5px;
+      font-weight: 400;
+      margin: 3% 0;
+    }
+    .img-row {
+      @include flex-evenly(row);
+      width: 85%;
+      img {
+        width: 22%;
+        height: auto;
+      }
+    }
+  }
+  //--------------------------------------About-----------------------------------------
+
+  //--------------------------------------F.A.Q-----------------------------------------
+  .Q-A {
+    width: 90%;
+    margin: 10vh auto;
+    .case {
+      margin: 7vh 0;
+      h2 {
+        margin-bottom: 2.5vh;
+        font-size: 33px;
+        color: $secondary-color;
+        font-weight: 500;
+      }
+      p {
+        line-height: 30px;
+        font-weight: 200;
+        color: $secondary-color;
+        font-size: 17px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  //--------------------------------------Contact-----------------------------------------
+  .contact-case {
+    width: 85%;
+    margin: 180px auto;
+    text-align: center;
+
+    .box-container {
+      @include flex-evenly(row);
+      margin: 80px auto;
+    }
+    .contact-box {
+      h3 {
+        font-size: 17px;
+        color: $secondary-color;
+        line-height: 30px;
+        font-weight: 200;
+      }
+    }
+    h2 {
+      line-height: 25px;
+      font-weight: 200;
+      color: $secondary-color;
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+  }
+  //--------------------------------------Portfolio-----------------------------------------
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 100px auto;
+    width: 75%;
+    img {
+      height: auto;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .nav-links {
+    @include flex-evenly(row);
+    justify-content: space-between;
+    width: 75%;
+    margin: 40px auto;
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      color: $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  footer {
+    @include flex-evenly(row);
+    margin-top: 100px;
+    width: 100%;
+    height: 50vh;
+    background-color: $gray-bg;
+    div {
+      @include flex-evenly(column);
+      height: 15vh;
+      .social {
+        width: 100px;
+        height: 50px;
+        @include flex-evenly(row);
+        i {
+          font-size: 18px;
+        }
+      }
+      img {
+        height: 100px;
+        width: 160px;
+      }
+      h4 {
+        font-size: 14px;
+        color: $secondary-color;
+        font-weight: 200;
+      }
+    }
+  }
+}
+@import "about";
+@import "reviews";
+@import "prices";
+@import "mobile";

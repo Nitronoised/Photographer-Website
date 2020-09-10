@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>About</title>
+  </head>
+  <header>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <div class="dropdown-c">
+          <a id="dropbtn-b" onclick="dropContent(portf)">Portfolio </a>
+          <div class="dropdown-content-c" id="portf">
+            <a href="./family.html"><span class="dot">•</span>Family</a>
+            <a href="./lovestory.html"><span class="dot">•</span>Lovestory</a>
+            <a href="./wedding.html"><span class="dot">•</span>Wedding</a>
+            <a href="./portrait.html"><span class="dot">•</span>Portrait</a>
+          </div>
+        </div>
+        <a href="./about.html">About</a>
+        <div class="dropdown-c">
+          <a id="dropbtn-a" onclick="dropContent(info)">Info </a>
+          <div class="dropdown-content-c" id="info">
+            <a href="./prices.html"><span class="dot">•</span>Prices</a>
+            <a href="./reviews.html"><span class="dot">•</span>Reviews</a>
+            <a href="./faq.html"><span class="dot">•</span>F.A.Q</a>
+          </div>
+        </div>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="head-wrap">
+      <a href="./index.html"><img src="/dist/img/Logo2.gif" class="logo" /></a>
+      <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
+    </div>
+    <div id="nav-wrap">
+      <div class="nav" id="nav">
+        <div class="dropdown">
+          <a class="dropbtn">Portfolio </a>
+          <div class="dropdown-content">
+            <a href="./family.html">Family</a>
+            <a href="./lovestory.html">Lovestory</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./portrait.html">Portrait</a>
+          </div>
+        </div>
+        <span class="dot">•</span> <a href="./about.html">About</a
+        ><span class="dot">•</span>
+        <div class="dropdown">
+          <a class="dropbtn">Info </a>
+          <div class="dropdown-content">
+            <a href="./prices.html">Prices</a>
+            <a href="./reviews.html">Reviews</a>
+            <a href="./faq.html">F.A.Q</a>
+          </div>
+        </div>
+        <span class="dot">•</span>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="intro-txt" style="background-image: url(./img/d.jpg)">
+      <div class="overlay-about">
+        <h2>Contact</h2>
+      </div>
+    </div>
+    <div class="contact-case">
+      <h2>
+        Я всегда открыта новым предложениям и неожиданным путешествиям. Если у
+        вас есть идея по фотосъемке — свадебной, love story, портретной,
+        свяжитесь со мной любым удобным для вас способом. Я буду рада воплотить
+        самую сумасшедшую фотоидею.
+      </h2>
+      <div class="box-container">
+        <div class="contact-box">
+          <h3><i class="fas fa-envelope"></i> E-mail</h3>
+          <h3>something@gmail.com</h3>
+        </div>
+
+        <div class="contact-box">
+          <h3><i class="fas fa-phone"></i> Phone number</h3>
+          <h3>+7 898 321 34 56</h3>
+        </div>
+
+        <div class="contact-box">
+          <h3><i class="fab fa-vk"></i> VKontakte</h3>
+          <h3>@Something-cool</h3>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <h4>Send me a message</h4>
+        <h4>Phtography@gmail.com</h4>
+      </div>
+      <div>
+        <img src="./img/Logo2.gif" />
+        <h4>Content presented by</h4>
+        <h4>Ilona Zhavrid</h4>
+      </div>
+      <div>
+        <h4>Contact me</h4>
+        <div class="social">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-vk"></i>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/effects.js"></script>
+  </body>
+</html>

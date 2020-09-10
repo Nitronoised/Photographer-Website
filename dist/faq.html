@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>About</title>
+  </head>
+  <header>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <div class="dropdown-c">
+          <a id="dropbtn-b" onclick="dropContent(portf)">Portfolio </a>
+          <div class="dropdown-content-c" id="portf">
+            <a href="./family.html"><span class="dot">•</span>Family</a>
+            <a href="./lovestory.html"><span class="dot">•</span>Lovestory</a>
+            <a href="./wedding.html"><span class="dot">•</span>Wedding</a>
+            <a href="./portrait.html"><span class="dot">•</span>Portrait</a>
+          </div>
+        </div>
+        <a href="./about.html">About</a>
+        <div class="dropdown-c">
+          <a id="dropbtn-a" onclick="dropContent(info)">Info </a>
+          <div class="dropdown-content-c" id="info">
+            <a href="./prices.html"><span class="dot">•</span>Prices</a>
+            <a href="./reviews.html"><span class="dot">•</span>Reviews</a>
+            <a href="./faq.html"><span class="dot">•</span>F.A.Q</a>
+          </div>
+        </div>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="head-wrap">
+      <a href="./index.html"><img src="/dist/img/Logo2.gif" class="logo" /></a>
+      <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
+    </div>
+    <div id="nav-wrap">
+      <div class="nav" id="nav">
+        <div class="dropdown">
+          <a class="dropbtn">Portfolio </a>
+          <div class="dropdown-content">
+            <a href="./family.html">Family</a>
+            <a href="./lovestory.html">Lovestory</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./portrait.html">Portrait</a>
+          </div>
+        </div>
+        <span class="dot">•</span> <a href="./about.html">About</a
+        ><span class="dot">•</span>
+        <div class="dropdown">
+          <a class="dropbtn">Info </a>
+          <div class="dropdown-content">
+            <a href="./prices.html">Prices</a>
+            <a href="./reviews.html">Reviews</a>
+            <a href="./faq.html">F.A.Q</a>
+          </div>
+        </div>
+        <span class="dot">•</span>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="intro-txt" style="background-image: url(./img/d.jpg)">
+      <div class="overlay-about">
+        <h2>F.A.Q</h2>
+      </div>
+    </div>
+    <div class="Q-A">
+      <div class="case">
+        <h2>Что включают в себя и сколько стоят ваши услуги на свадьбе?</h2>
+        <p>
+          Подробные тарифы указаны в разделе «Цены». Если ни один из тарифов вам
+          не подошел, напишите мне, и мы найдем решение именно для вашего
+          случая. Напишите, какая фотосъемка вам нужна. Я свяжусь с вами, чтобы
+          обсудить все детали — место проведения, сроки, бюджет.
+        </p>
+      </div>
+      <div class="case">
+        <h2>Какое количество фотографий мы получим?</h2>
+        <p>
+          В среднем за 10 часовую съемку на свадебном торжестве получается от
+          500 обработанных фотографий. В зависимости от насыщенности и
+          продолжительности дня, фотографий может быть больше.
+        </p>
+      </div>
+      <div class="case">
+        <h2>Где вы находитесь? Снимаете за границей?</h2>
+        <p>
+          Я живу в Москве. Люблю путешествовать и для большинства свадебных
+          проектов путешествую по Европе — снимала свадьбы в Италии, Франции,
+          Швейцарии, Англии, Чехии, Нидерландах, Греции. Может оказаться так,
+          что на запланированную вами дату я буду находиться в странах Европы,
+          не стесняйтесь, напишите мне и я свяжусь с вами, чтобы уточнить
+          возможность съемки.
+        </p>
+      </div>
+      <div class="case">
+        <h2>Как забронировать дату фотосъемки?</h2>
+        <p>
+          Чтобы забронировать дату, напишите мне в разделе «Контакты» или любым
+          удобным способом. После подтверждения даты, подписания договора и
+          внесения предоплаты, дата съемки будет забронирована за вами.
+        </p>
+      </div>
+      <div class="case">
+        <h2>Какие камеры вы используете?</h2>
+        <p>
+          Я использую пленочный фотоаппарат Contax 645 и цифровые камеры Canon
+          5d mark3. В зависимости от условий съемки, я использую ту камеру, с
+          помощью которой получу лучший результат.
+        </p>
+      </div>
+      <div class="case">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <h4>Send me a message</h4>
+        <h4>Phtography@gmail.com</h4>
+      </div>
+      <div>
+        <img src="./img/Logo2.gif" />
+        <h4>Content presented by</h4>
+        <h4>Ilona Zhavrid</h4>
+      </div>
+      <div>
+        <h4>Contact me</h4>
+        <div class="social">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-vk"></i>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/effects.js"></script>
+  </body>
+</html>
