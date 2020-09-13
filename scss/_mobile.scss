@@ -28,7 +28,7 @@
       height: auto !important;
     }
     .video-bg {
-      @include fixed-bg(url(/dist/img/faq.jpg));
+      @include fixed-bg(url(../img/d.jpg));
       video {
         visibility: hidden;
       }
