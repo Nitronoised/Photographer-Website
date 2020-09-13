@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 #lg-text {
   font-size: 25px;
   color: #424242;
@@ -15,15 +18,12 @@
   letter-spacing: 2px;
   text-transform: uppercase; }
 
+#current {
+  opacity: 0.6; }
+
 header {
   width: 100%;
-  height: 150px;
-  /* Position the content inside the overlay */
-  /* The navigation links inside the overlay */
-  /* When you mouse over the navigation links, change their color */
-  /* Position the close button (top right corner) */
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  /* The Overlay (background) */ }
+  height: 150px; }
   header .sticky + .content {
     padding-top: 60px; }
   header .head-wrap {
@@ -119,45 +119,28 @@ header {
       opacity: 0.8;
       cursor: pointer; }
   header .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100%;
     width: 0;
     position: fixed;
-    /* Stay in place */
     z-index: 5;
-    /* Sit on top */
     left: 0;
     top: 0;
-    /* Black fallback color */
     background-color: #fafafa;
-    /* Black w/opacity */
     overflow: hidden;
-    /* Disable horizontal scroll */
-    transition: 0.5s ease-in-out;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
+    transition: 0.5s ease-in-out; }
     header .overlay a {
       padding: 8px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 20px;
       color: #3d3d3d;
       display: block;
-      /* Display block instead of inline */
-      transition: 0.3s;
-      /* Transition effects on hover (color) */ }
-    header .overlay .dot {
-      font-size: 15px;
-      font-weight: 100;
-      margin-right: 5px; }
+      transition: 0.3s; }
   header .overlay-content {
     position: relative;
     top: 23%;
-    /* 25% from the top */
-    width: 115px;
-    /* 100% width */
+    width: 145px;
     text-align: left;
-    /* Centered text/links */
-    margin: 30px 0 0 30px;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */ }
+    margin: 30px 0 0 30px; }
     header .overlay-content .dropdown-c {
       overflow: hidden; }
       header .overlay-content .dropdown-c .dropdown-content-c {
@@ -168,11 +151,13 @@ header {
         transition: 0.4s ease-in-out;
         height: 0;
         padding-left: 5px; }
+        header .overlay-content .dropdown-c .dropdown-content-c .dot {
+          margin-right: 5px; }
         header .overlay-content .dropdown-c .dropdown-content-c a {
           float: none;
           text-decoration: none;
           text-transform: capitalize;
-          font-size: 1.1rem;
+          font-size: 15px;
           display: block; }
   header .overlay a:hover,
   header .overlay a:focus {
@@ -211,10 +196,17 @@ body {
     body .overlay-ad hr {
       height: 100px; }
     body .overlay-ad h2 {
-      font-size: 3.8rem;
+      font-size: 3.9rem;
       color: #ffffff;
-      font-weight: 100;
-      text-align: center; }
+      font-weight: 200;
+      text-align: center;
+      font-family: "Playfair Display SC", serif; }
+      body .overlay-ad h2 a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: ease 0.3s; }
+        body .overlay-ad h2 a:hover {
+          color: #f1c6c6; }
   body .slideshow-container {
     width: 100%;
     height: 80vh;
@@ -249,8 +241,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100%;
-    background-color: #fafafa; }
+    width: 100%; }
     body .text-intro h3 {
       color: #a7a7a7;
       font-size: 12px;
@@ -262,7 +253,6 @@ body {
       letter-spacing: 2px;
       width: 60%;
       text-align: center;
-      color: #3d3d3d;
       font-weight: 200; }
     body .text-intro img {
       height: 150px;
@@ -362,31 +352,6 @@ body {
       color: #424242;
       font-size: 17px;
       letter-spacing: 2px; }
-  body .image-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin: 100px auto;
-    width: 75%; }
-    body .image-container img {
-      height: auto;
-      width: 100%;
-      margin: 0 auto; }
-  body .nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-content: space-between;
-    width: 75%;
-    margin: 40px auto; }
-    body .nav-links a {
-      text-decoration: none;
-      font-size: 25px;
-      color: #424242; }
-      body .nav-links a:hover {
-        cursor: pointer; }
   body footer {
     display: flex;
     flex-direction: row;
@@ -409,8 +374,15 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center; }
-        body footer div .social i {
-          font-size: 18px; }
+        body footer div .social a {
+          font-size: 18px;
+          text-decoration: none;
+          color: #424242; }
+          body footer div .social a i {
+            color: #424242;
+            transition: ease 0.3s; }
+            body footer div .social a i:hover {
+              color: #f1c6c6; }
       body footer div img {
         height: 100px;
         width: 160px; }
@@ -418,6 +390,33 @@ body {
         font-size: 14px;
         color: #424242;
         font-weight: 200; }
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 100px auto;
+  width: 75%; }
+  .image-container img {
+    height: auto;
+    width: 100%;
+    margin: 0 auto; }
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  margin: 40px auto; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #424242; }
+    .nav-links a:hover {
+      cursor: pointer; }
 
 .intro-txt {
   width: 100%;
@@ -430,7 +429,7 @@ body {
   .intro-txt .overlay-about {
     height: 100%;
     width: 100%;
-    background-color: #11111154;
+    background-color: #11111186;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -438,9 +437,10 @@ body {
     align-items: center;
     justify-content: center; }
     .intro-txt .overlay-about h2 {
-      color: #bdbdbd;
+      color: #ffffff;
       font-size: 40px;
-      font-weight: 200; }
+      font-weight: 200;
+      font-family: "Playfair Display SC", serif; }
 
 .about-elements {
   display: grid;
@@ -482,10 +482,10 @@ body {
       align-items: center;
       align-items: flex-end;
       justify-content: flex-end;
-      height: 20vh; }
+      height: 180px; }
       .about-elements .para-txt .signature img {
-        height: 100px;
-        width: 150px; }
+        height: 140px;
+        width: 280px; }
 
 .comments-box {
   height: 90vh;
@@ -504,7 +504,7 @@ body {
   text-align: center;
   width: 25%; }
   .comment h2 {
-    font-size: 40px;
+    font-size: 35px;
     color: #424242;
     font-weight: 400; }
   .comment h4 {
@@ -629,7 +629,7 @@ body {
   body #img-md {
     height: auto !important; }
   body .video-bg {
-    background-image: url(/dist/img/2..jpg);
+    background-image: url(/dist/img/faq.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed; }
@@ -676,7 +676,10 @@ body {
     width: 90%;
     font-size: 25px; }
   .prices-container {
-    width: 100%; } }
+    width: 100%; }
+  .image-container,
+  .nav-links {
+    width: 95%; } }
 
 @media screen and (max-width: 670px) {
   header {
@@ -731,6 +734,8 @@ body {
       margin: 50px auto; }
       body .prices-container .prices .price-box {
         width: 100%; }
+  body .nav-links a {
+    font-size: 15px; }
   body footer {
     flex-direction: column;
     height: 90vh;

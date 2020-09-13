@@ -24,90 +24,111 @@
     <title>Prices</title>
   </head>
   <header>
-    <!-- The overlay -->
     <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-
-      <!-- Overlay content -->
       <div class="overlay-content">
         <div class="dropdown-c">
-          <a id="dropbtn-b" onclick="dropContent(portf)">Portfolio </a>
+          <a id="dropbtn-b" onclick="dropContent(portf)">ПОРТФОЛИО</a>
           <div class="dropdown-content-c" id="portf">
-            <a href="./family.html"><span class="dot">•</span>Family</a>
-            <a href="./lovestory.html"><span class="dot">•</span>Lovestory</a>
-            <a href="./wedding.html"><span class="dot">•</span>Wedding</a>
-            <a href="./portrait.html"><span class="dot">•</span>Portrait</a>
+            <a href="./family.html"><span class="dot">•</span>СЕМЕЙНЫЕ</a>
+            <a href="./lovestory.html"><span class="dot">•</span>LOVESTORY</a>
+            <a href="./wedding.html"><span class="dot">•</span>СВАДЬБЫ</a>
+            <a href="./portrait.html"><span class="dot">•</span>ПОРТРЕТЫ</a>
           </div>
         </div>
-        <a href="./about.html">About</a>
+        <a href="./about.html">OБ АВТОРЕ</a>
         <div class="dropdown-c">
-          <a id="dropbtn-a" onclick="dropContent(info)">Info </a>
+          <a id="dropbtn-a" onclick="dropContent(info)">ИНФО </a>
           <div class="dropdown-content-c" id="info">
-            <a href="./prices.html"><span class="dot">•</span>Prices</a>
-            <a href="./reviews.html"><span class="dot">•</span>Reviews</a>
+            <a href="./prices.html"><span class="dot">•</span>ЦЕНЫ</a>
+            <a href="./reviews.html"><span class="dot">•</span>ОТЗЫВЫ</a>
             <a href="./faq.html"><span class="dot">•</span>F.A.Q</a>
           </div>
         </div>
-        <a href="#">Contact</a>
+        <a href="./contact.html">КОНТАКТЫ</a>
       </div>
     </div>
 
-    <div class="head-wrap">
-      <a href="./index.html"><img src="/dist/img/Logo2.gif" class="logo" /></a>
+    <div class="head-wrap" data-aos="fade-down">
+      <a href="./index.html"
+        ><img src="/dist/img/Elona-logo.png" class="logo"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap">
+    <div id="nav-wrap" data-aos="fade-up">
       <div class="nav" id="nav">
         <div class="dropdown">
-          <a class="dropbtn">Portfolio </a>
+          <a class="dropbtn"> ПОРТФОЛИО</a>
           <div class="dropdown-content">
-            <a href="./family.html">Family</a>
-            <a href="./lovestory.html">Lovestory</a>
-            <a href="./wedding.html">Wedding</a>
-            <a href="./portrait.html">Portrait</a>
+            <a href="./family.html">СЕМЕЙНЫЕ</a>
+            <a href="./lovestory.html">LOVESTORY</a>
+            <a href="./wedding.html">СВАДЬБЫ</a>
+            <a href="./portrait.html">ПОРТРЕТЫ</a>
           </div>
         </div>
-        <span class="dot">•</span> <a href="./about.html">About</a
+        <span class="dot">•</span> <a href="./about.html">OБ АВТОРЕ</a
         ><span class="dot">•</span>
         <div class="dropdown">
-          <a class="dropbtn">Info </a>
+          <a class="dropbtn">ИНФО</a>
           <div class="dropdown-content">
-            <a href="./prices.html">Prices</a>
-            <a href="./reviews.html">Reviews</a>
+            <a href="./prices.html">ЦЕНЫ</a>
+            <a href="./reviews.html">ОТЗЫВЫ</a>
             <a href="./faq.html">F.A.Q</a>
           </div>
         </div>
         <span class="dot">•</span>
-        <a href="/About.html">Contact</a>
+        <a href="./contact.html">КОНТАКТЫ</a>
       </div>
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/d.jpg)">
+    <div class="intro-txt" style="background-image: url(./img/wedding.jpg)">
       <div class="overlay-about">
-        <h2>Prices</h2>
+        <h2>Свадебные фото</h2>
       </div>
     </div>
-
+    <div class="image-container">
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+      <img src="./img/w-1.png" alt="image" />
+    </div>
+    <div class="nav-links">
+      <a href="./wedding.html">
+        <i id="arrow" class="fas fa-long-arrow-alt-left"></i>Предыдущий альбом
+      </a>
+      <a href="./family.html"
+        >Следующий альбом <i id="arrow" class="fas fa-long-arrow-alt-right"></i
+      ></a>
+    </div>
     <footer>
       <div>
-        <h4>Send me a message</h4>
-        <h4>Phtography@gmail.com</h4>
+        <h4>Напишите мне</h4>
+        <h4>eloyna@list.ru</h4>
       </div>
       <div>
-        <img src="./img/Logo2.gif" />
-        <h4>Content presented by</h4>
+        <img src="./img/Elona-logo.png" />
+        <h4>Контент предоставлен</h4>
         <h4>Ilona Zhavrid</h4>
       </div>
       <div>
-        <h4>Contact me</h4>
+        <h4>Присоединяйтесь</h4>
         <div class="social">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-vk"></i>
+          <a href="https://www.facebook.com/ilona.banny" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/ilonazhavrid/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://vk.com/elouna" target="_blank"
+            ><i class="fab fa-vk"></i
+          ></a>
         </div>
       </div>
     </footer>

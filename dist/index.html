@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playfair+Display+SC&display=swap"
       rel="stylesheet"
     />
     <link
@@ -24,66 +29,62 @@
     <title>Home</title>
   </head>
   <header>
-    <!-- The overlay -->
     <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
-
-      <!-- Overlay content -->
       <div class="overlay-content">
         <div class="dropdown-c">
-          <a id="dropbtn-b" onclick="dropContent(portf)">Portfolio </a>
+          <a id="dropbtn-b" onclick="dropContent(portf)">ПОРТФОЛИО</a>
           <div class="dropdown-content-c" id="portf">
-            <a href="./family.html"><span class="dot">•</span>Family</a>
-            <a href="./lovestory.html"><span class="dot">•</span>Lovestory</a>
-            <a href="./wedding.html"><span class="dot">•</span>Wedding</a>
-            <a href="./portrait.html"><span class="dot">•</span>Portrait</a>
+            <a href="./family.html"><span class="dot">•</span>СЕМЕЙНЫЕ</a>
+            <a href="./lovestory.html"><span class="dot">•</span>LOVESTORY</a>
+            <a href="./wedding.html"><span class="dot">•</span>СВАДЬБЫ</a>
+            <a href="./portrait.html"><span class="dot">•</span>ПОРТРЕТЫ</a>
           </div>
         </div>
-        <a href="./about.html">About</a>
+        <a href="./about.html">OБ АВТОРЕ</a>
         <div class="dropdown-c">
-          <a id="dropbtn-a" onclick="dropContent(info)">Info </a>
+          <a id="dropbtn-a" onclick="dropContent(info)">ИНФО </a>
           <div class="dropdown-content-c" id="info">
-            <a href="./prices.html"><span class="dot">•</span>Prices</a>
-            <a href="./reviews.html"><span class="dot">•</span>Reviews</a>
+            <a href="./prices.html"><span class="dot">•</span>ЦЕНЫ</a>
+            <a href="./reviews.html"><span class="dot">•</span>ОТЗЫВЫ</a>
             <a href="./faq.html"><span class="dot">•</span>F.A.Q</a>
           </div>
         </div>
-        <a href="./contact.html">Contact</a>
+        <a href="./contact.html">КОНТАКТЫ</a>
       </div>
     </div>
 
-    <div class="head-wrap">
+    <div class="head-wrap" data-aos="fade-down">
       <a href="./index.html"
         ><img src="/dist/img/Elona-logo.png" class="logo"
       /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap">
+    <div id="nav-wrap" data-aos="fade-up">
       <div class="nav" id="nav">
         <div class="dropdown">
-          <a class="dropbtn">Portfolio </a>
+          <a class="dropbtn"> ПОРТФОЛИО</a>
           <div class="dropdown-content">
-            <a href="./family.html">Family</a>
-            <a href="./lovestory.html">Lovestory</a>
-            <a href="./wedding.html">Wedding</a>
-            <a href="./portrait.html">Portrait</a>
+            <a href="./family.html">СЕМЕЙНЫЕ</a>
+            <a href="./lovestory.html">LOVESTORY</a>
+            <a href="./wedding.html">СВАДЬБЫ</a>
+            <a href="./portrait.html">ПОРТРЕТЫ</a>
           </div>
         </div>
-        <span class="dot">•</span> <a href="./about.html">About</a
+        <span class="dot">•</span> <a href="./about.html">OБ АВТОРЕ</a
         ><span class="dot">•</span>
         <div class="dropdown">
-          <a class="dropbtn">Info </a>
+          <a class="dropbtn">ИНФО</a>
           <div class="dropdown-content">
-            <a href="./prices.html">Prices</a>
-            <a href="./reviews.html">Reviews</a>
+            <a href="./prices.html">ЦЕНЫ</a>
+            <a href="./reviews.html">ОТЗЫВЫ</a>
             <a href="./faq.html">F.A.Q</a>
           </div>
         </div>
         <span class="dot">•</span>
-        <a href="./contact.html">Contact</a>
+        <a href="./contact.html">КОНТАКТЫ</a>
       </div>
     </div>
   </header>
@@ -92,7 +93,7 @@
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/1..jpg"
+          src="./img/faq.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
         <img
@@ -110,7 +111,7 @@
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/2..jpg"
+          src="./img/wed.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
         <img
@@ -128,14 +129,10 @@
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/3..jpg"
+          src="./img/lovestory.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
-        <img
-          id="img-md"
-          src="./img/couple3.jpg"
-          style="width: 100%; height: 0"
-        />
+        <img id="img-md" src="./img/d.jpg" style="width: 100%; height: 0" />
         <img
           id="img-sm"
           src="./img/couple3.jpg"
@@ -144,7 +141,7 @@
       </div>
     </div>
 
-    <div class="text-intro">
+    <div class="text-intro" data-aos="fade-up">
       <h3 id="sm-text">ЭМОЦИИ В КАЖДОМ СНИМКЕ</h3>
       <h2 id="lg-text">
         Для каждой пары я ищу свою особенную историю и стараюсь сохранить ваши
@@ -152,54 +149,54 @@
         как чувствовать себя свободно перед камерой и получить от съемки
         удовольствие.
       </h2>
-      <img src="./img/Sign.png" />
+      <img src="./img/signature-ilona.png" />
     </div>
 
     <div class="video-bg">
       <video src="./img/couple-field.mp4" autoplay loop muted></video>
       <div class="overlay-ad">
-        <h2>ОТЗЫВЫ</h2>
+        <h2 data-aos="fade-up"><a href="./reviews.html">ОТЗЫВЫ</a></h2>
         <hr />
-        <h2>ЦЕНИ</h2>
+        <h2 data-aos="fade-up"><a href="./prices.html">ЦЕНЫ</a></h2>
       </div>
     </div>
     <div class="offers">
-      <div class="offer">
-        <img src="./img/couple.jpg" />
-        <h4 id="lg-text">Family</h4>
+      <div class="offer" data-aos="fade-up">
+        <img src="./img/family.jpg" />
+        <h4 id="lg-text">Семейные фото</h4>
         <a id="sm-text" href="./family.html"
-          >Check in Portfolio
+          >СМОТРЕТЬ В ПОРТФОЛИО
           <i id="arrow" class="fas fa-long-arrow-alt-right"></i
         ></a>
       </div>
-      <div class="offer">
-        <img src="./img/couple3.jpg" />
+      <div class="offer" data-aos="fade-up">
+        <img src="./img/lovestory.jpg" />
         <h4 id="lg-text">Lovestory</h4>
         <a id="sm-text" href="./lovestory.html"
-          >Check in Portfolio
+          >СМОТРЕТЬ В ПОРТФОЛИО
           <i id="arrow" class="fas fa-long-arrow-alt-right"></i
         ></a>
       </div>
-      <div class="offer">
-        <img src="./img/couple.jpg" />
-        <h4 id="lg-text">Wedding</h4>
+      <div class="offer" data-aos="fade-up">
+        <img src="./img/wedding.jpg" />
+        <h4 id="lg-text">Свадебные фото</h4>
         <a id="sm-text" href="./wedding.html"
-          >Check in Portfolio
+          >СМОТРЕТЬ В ПОРТФОЛИО
           <i id="arrow" class="fas fa-long-arrow-alt-right"></i
         ></a>
       </div>
-      <div class="offer">
-        <img src="./img/couple3.jpg" />
-        <h4 id="lg-text">Portrait</h4>
+      <div class="offer" data-aos="fade-up">
+        <img src="./img/portrait.jpg" />
+        <h4 id="lg-text">Портретные фото</h4>
         <a href="./portrait.html" id="sm-text"
-          >Check in Portfolio
+          >СМОТРЕТЬ В ПОРТФОЛИО
           <i id="arrow" class="fas fa-long-arrow-alt-right"></i
         ></a>
       </div>
     </div>
-    <div class="banner">
-      <h2>Check my photos on instagram</h2>
-      <h4>@best-photogrpahy</h4>
+    <div class="banner" data-aos="fade-up">
+      <h2>Следите за моими работами в Instagram</h2>
+      <h4>@ilonazhavrid</h4>
       <div class="img-row">
         <img src="./img/a.jpg" />
         <img src="./img/b.jpg" />
@@ -210,7 +207,7 @@
     <footer>
       <div>
         <h4>Напишите мне</h4>
-        <h4>Phtography@gmail.com</h4>
+        <h4>eloyna@list.ru</h4>
       </div>
       <div>
         <img src="./img/Elona-logo.png" />
@@ -220,12 +217,23 @@
       <div>
         <h4>Присоединяйтесь</h4>
         <div class="social">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-vk"></i>
+          <a href="https://www.facebook.com/ilona.banny" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/ilonazhavrid/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://vk.com/elouna" target="_blank"
+            ><i class="fab fa-vk"></i
+          ></a>
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 200, delay: 50 });
+    </script>
+
     <script src="./js/effects.js"></script>
   </body>
 </html>

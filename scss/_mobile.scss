@@ -28,7 +28,7 @@
       height: auto !important;
     }
     .video-bg {
-      @include fixed-bg(url(/dist/img/2..jpg));
+      @include fixed-bg(url(/dist/img/faq.jpg));
       video {
         visibility: hidden;
       }
@@ -107,6 +107,11 @@
   //--------------------------Prices----------------
   .prices-container {
     width: 100%;
+  }
+  //--------------------------Portfolio----------------
+  .image-container,
+  .nav-links {
+    width: 95%;
   }
 }
 
@@ -196,6 +201,12 @@
         .price-box {
           width: 100%;
         }
+      }
+    }
+    //--------------------------Prices----------------
+    .nav-links {
+      a {
+        font-size: 15px;
       }
     }
     footer {

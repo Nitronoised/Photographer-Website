@@ -6,14 +6,15 @@
   .overlay-about {
     height: 100%;
     width: 100%;
-    background-color: #11111154;
+    background-color: #11111186;
     z-index: 1;
     @include flex-evenly(column);
     justify-content: center;
     h2 {
-      color: $faded;
+      color: $primary-color;
       font-size: 40px;
       font-weight: 200;
+      font-family: "Playfair Display SC", serif;
     }
   }
 }
@@ -62,10 +63,10 @@
       @include flex-evenly(row);
       align-items: flex-end;
       justify-content: flex-end;
-      height: 20vh;
+      height: 180px;
       img {
-        height: 100px;
-        width: 150px;
+        height: 140px;
+        width: 280px;
       }
     }
   }
