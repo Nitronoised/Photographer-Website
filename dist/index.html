@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="image_src" href="./img/Elona-logo.jpg" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -26,7 +27,7 @@
       rel="stylesheet"
     />
 
-    <title>Home</title>
+    <title>Главная</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -57,7 +58,9 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
     <div id="nav-wrap" data-aos="fade-up">
@@ -91,55 +94,44 @@
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/faq.jpg"
+          src="./img/carousel-1.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
         <img
-          id="img-md"
-          src="./img/couple3.jpg"
-          style="width: 100%; height: 0"
-        />
-        <img
           id="img-sm"
-          src="./img/couple.jpg"
-          style="width: 100%; height: 0"
+          src="./img/q-4.png"
+          style="width: 100%; height: 0; z-index: 0"
         />
       </div>
       <!-----------------------------MD----------------------------->
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/wed.jpg"
+          src="./img/carousel-2.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
         <img
-          id="img-md"
-          src="./img/couple.jpg"
-          style="width: 100%; height: 0"
-        />
-        <img
           id="img-sm"
-          src="./img/couple3.jpg"
-          style="width: 100%; height: 0"
+          src="./img/l-1.jpg"
+          style="width: 100%; height: 0; z-index: 0"
         />
       </div>
       <!-----------------------------SM----------------------------->
       <div class="mySlides fade">
         <img
           id="img-lg"
-          src="./img/lovestory.jpg"
+          src="./img/carousel-3.jpg"
           style="width: 100%; height: auto; z-index: 0"
         />
-        <img id="img-md" src="./img/d.jpg" style="width: 100%; height: 0" />
         <img
           id="img-sm"
-          src="./img/couple3.jpg"
-          style="width: 100%; height: 0"
+          src="./img/p-2.jpg"
+          style="width: 100%; height: 0; z-index: 0"
         />
       </div>
     </div>
 
-    <div class="text-intro" data-aos="fade-up">
+    <div class="text-intro" data-aos="fade-up" id="nav-limit">
       <h3 id="sm-text">ЭМОЦИИ В КАЖДОМ СНИМКЕ</h3>
       <h2 id="lg-text">
         Для каждой пары я ищу свою особенную историю и стараюсь сохранить ваши
@@ -160,7 +152,7 @@
     </div>
     <div class="offers">
       <div class="offer" data-aos="fade-up">
-        <img src="./img/family.jpg" />
+        <img src="./img/f-3.jpg" />
         <h4 id="lg-text">Семейные фото</h4>
         <a id="sm-text" href="./family.html"
           >СМОТРЕТЬ В ПОРТФОЛИО
@@ -168,7 +160,7 @@
         ></a>
       </div>
       <div class="offer" data-aos="fade-up">
-        <img src="./img/lovestory.jpg" />
+        <img src="./img/l-1.jpg" />
         <h4 id="lg-text">Lovestory</h4>
         <a id="sm-text" href="./lovestory.html"
           >СМОТРЕТЬ В ПОРТФОЛИО
@@ -176,7 +168,7 @@
         ></a>
       </div>
       <div class="offer" data-aos="fade-up">
-        <img src="./img/wedding.jpg" />
+        <img src="./img/w-1.jpg" />
         <h4 id="lg-text">Свадебные фото</h4>
         <a id="sm-text" href="./wedding.html"
           >СМОТРЕТЬ В ПОРТФОЛИО
@@ -184,7 +176,7 @@
         ></a>
       </div>
       <div class="offer" data-aos="fade-up">
-        <img src="./img/portrait.jpg" />
+        <img src="./img/p-2.jpg" />
         <h4 id="lg-text">Портретные фото</h4>
         <a href="./portrait.html" id="sm-text"
           >СМОТРЕТЬ В ПОРТФОЛИО
@@ -196,12 +188,13 @@
       <h2>Следите за моими работами в Instagram</h2>
       <h4>@ilonazhavrid</h4>
       <div class="img-row">
-        <img src="./img/a.jpg" />
-        <img src="./img/b.jpg" />
-        <img src="./img/c.jpg" />
-        <img src="./img/d.jpg" />
+        <img src="./img/box-1.jpg" />
+        <img src="./img/box-2.jpg" />
+        <img src="./img/box-3.jpg" />
+        <img src="./img/box-4.jpg" />
       </div>
     </div>
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>

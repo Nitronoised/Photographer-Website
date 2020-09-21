@@ -19,14 +19,9 @@
   }
   body {
     .slideshow-container {
-      height: 90vh !important;
+      height: 60vh !important;
     }
-    #img-lg {
-      height: 0 !important;
-    }
-    #img-md {
-      height: auto !important;
-    }
+
     .video-bg {
       @include fixed-bg(url(../img/d.jpg));
       video {
@@ -42,7 +37,7 @@
       }
     }
     .offers {
-      width: 95%;
+      width: 90%;
     }
     .banner {
       width: 100%;
@@ -62,13 +57,17 @@
     }
     //--------------------------About----------------
     .about-elements {
-      width: 90%;
+      width: 70%;
       margin: 10vh auto;
-      grid-gap: 0;
+      grid-gap: 40px;
       grid-template-columns: 1fr;
       grid-template-areas:
-        "title"
-        "txt";
+        "img"
+        "title";
+      .pro-img {
+        margin: 0 auto;
+        width: 100%;
+      }
       .para-title {
         h1 {
           font-size: 35px;
@@ -129,11 +128,16 @@
     }
   }
   body {
-    #img-md {
-      height: 0;
+    #nav-up {
+      right: 48.5%;
     }
-    #img-sm {
-      height: 0;
+    .slideshow-container {
+      #img-lg {
+        height: 0 !important;
+      }
+      #img-sm {
+        height: auto !important;
+      }
     }
     .text-intro {
       h2 {
@@ -165,6 +169,19 @@
       }
       h4 {
         margin: 30px 0;
+      }
+    }
+    //--------------------------About----------------
+    .about-elements {
+      width: 85%;
+      grid-gap: 50px;
+      .pro-img {
+        margin: 0 auto;
+      }
+      .para-title {
+        h1 {
+          font-size: 35px;
+        }
       }
     }
     //--------------------------Reviews----------------
@@ -203,8 +220,9 @@
         }
       }
     }
-    //--------------------------Prices----------------
+    //--------------------------Portfolio----------------
     .nav-links {
+      margin: 0;
       a {
         font-size: 15px;
       }

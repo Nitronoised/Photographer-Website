@@ -10,6 +10,11 @@
   background-position: center;
   background-attachment: fixed;
 }
+@mixin norm-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 @mixin debug {
   outline: red solid 1px;
 }

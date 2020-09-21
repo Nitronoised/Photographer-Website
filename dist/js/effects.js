@@ -1,5 +1,6 @@
 window.onscroll = () => {
   stickyNav();
+  showNavArrow();
 };
 
 var nav = document.getElementById("nav-wrap");
@@ -13,6 +14,17 @@ function stickyNav() {
     nav.classList.add("sticky");
   } else {
     nav.classList.remove("sticky");
+  }
+}
+var navLimit = document.querySelector("#nav-limit");
+var navBtn = document.querySelector("#nav-up");
+var navTop = navLimit.offsetTop;
+
+function showNavArrow() {
+  if (window.pageYOffset >= navTop) {
+    navBtn.style.visibility = "visible";
+  } else {
+    navBtn.style.visibility = "hidden";
   }
 }
 var slideIndex = 1;

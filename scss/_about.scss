@@ -22,8 +22,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    "title txt"
-    "title txt";
+    "img title"
+    "img title";
   grid-gap: 70px;
   width: 80%;
   margin: 20vh auto;
@@ -31,7 +31,7 @@
     grid-area: title;
     h1 {
       font-weight: 600;
-      font-size: 45px;
+      font-size: 40px;
       color: $secondary-color;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -51,12 +51,20 @@
       }
     }
   }
+  .pro-img {
+    grid-area: img;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
   .para-txt {
-    grid-area: txt;
     p {
       color: $secondary-color;
       letter-spacing: 1px;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 30px;
     }
     .signature {

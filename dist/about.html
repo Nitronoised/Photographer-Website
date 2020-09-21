@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -21,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>About</title>
+    <title>Об Авторе</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -52,10 +53,12 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap" data-aos="fade-up">
+    <div id="nav-wrap" data-aos="fade-in">
       <div class="nav" id="nav">
         <div class="dropdown">
           <a class="dropbtn"> ПОРТФОЛИО</a>
@@ -82,45 +85,43 @@
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/about.jpg)">
+    <div
+      class="intro-txt"
+      style="background-image: url(./img/about.jpg)"
+      data-aos="fade-in"
+    >
       <div class="overlay-about">
-        <h2>Об авторе</h2>
+        <h2 data-aos="fade-up">Об авторе</h2>
       </div>
     </div>
 
-    <div class="about-elements">
+    <div class="about-elements" data-aos="fade-up">
+      <div class="pro-img"><img src="./img/about-img.png" /></div>
       <div class="para-title">
         <h1>Я влюбляюсь в каждую семью, с которой работаю</h1>
         <h5>
           <span></span>
           Ilona Zhavrid
         </h5>
-      </div>
-      <div class="para-txt">
-        <p>
-          «Приятно познакомиться! Я Илона, из Минска. В своих фотографиях я
-          стремлюсь совместить чистоту кадра и эмоциональность момента.
-          Естественность, красота, искренняя радость, моменты, когда мы
-          чувствуем себя красивыми и любимыми, семья, которая рядом с нами,
-          объятия друзей, смех и слезы радости — чаще всего нам хочется
-          остановить именно эти мгновения нашей жизни и именно их хочется
-          вспоминать долго. Я влюбляюсь в каждую семью, с которой работаю и
-          стараюсь сохранить ваши воспоминания влюбленными глазами. К счастью,
-          благодаря нашей работе, наши границы расширились, теперь нас
-          приглашают на съемки в разные страны. Это очень вдохновляет! Для нас
-          честь быть частью ведущих свадебных и лайфстайл изданий: Once Wed,
-          Magnolia Rouge, Wedding Sparrow, Wedding Vibes, Belle Lumber Magazine,
-          Simple+Beyond, Kinfolk Russia, Wedding Story, Veter Magazine, The
-          Bridestory и др.» Мы бесконечно благодарны Насте Весна и Максиму
-          Гладких за возможность использовать их потрясающие работы для
-          демонстрации этого сайта. Ребята, вы просто космос!
-        </p>
-        <div class="signature">
-          <img src="./img/Signature-ilona.png" />
+
+        <div class="para-txt" id="nav-limit">
+          <p>
+            «Приятно познакомиться! Я Илона, из Минска. В своих фотографиях я
+            стремлюсь совместить чистоту кадра и эмоциональность момента.
+            Естественность, красота, искренняя радость, моменты, когда мы
+            чувствуем себя красивыми и любимыми, семья, которая рядом с нами,
+            объятия друзей, смех и слезы радости — чаще всего нам хочется
+            остановить именно эти мгновения нашей жизни и именно их хочется
+            вспоминать долго. Я влюбляюсь в каждую семью, с которой работаю и
+            стараюсь сохранить ваши воспоминания влюбленными глазами.
+          </p>
+          <div class="signature">
+            <img src="./img/Signature-ilona.png" />
+          </div>
         </div>
       </div>
     </div>
-
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>
@@ -147,5 +148,9 @@
       </div>
     </footer>
     <script src="./js/effects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 100, delay: 50 });
+    </script>
   </body>
 </html>
