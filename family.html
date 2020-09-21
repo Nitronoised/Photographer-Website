@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -21,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>Prices</title>
+    <title>Семейные</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -52,10 +53,12 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap" data-aos="fade-up">
+    <div id="nav-wrap" data-aos="fade-in">
       <div class="nav" id="nav">
         <div class="dropdown">
           <a class="dropbtn"> ПОРТФОЛИО</a>
@@ -82,29 +85,32 @@
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/family.jpg)">
+    <div
+      class="intro-txt"
+      style="background-image: url(./img/family.jpg)"
+      data-aos="fade-in"
+    >
       <div class="overlay-about">
-        <h2>Семейные фото</h2>
+        <h2 data-aos="fade-up">Семейные фото</h2>
       </div>
     </div>
-    <div class="image-container">
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
-      <img src="./img/w-1.png" alt="image" />
+    <div class="image-container" id="nav-limit">
+      <img src="./img/f-1.jpg" alt="image" data-aos="fade-up" />
+      <img src="./img/f-2.jpg" alt="image" data-aos="fade-up" />
+      <img src="./img/f-3.jpg" alt="image" data-aos="fade-up" />
+      <img src="./img/f-4.jpg" alt="image" data-aos="fade-up" />
+      <img src="./img/f-5.jpg" alt="image" data-aos="fade-up" />
+      <img src="./img/f-6.jpg" alt="image" data-aos="fade-up" />
     </div>
     <div class="nav-links">
-      <a href="./wedding.html">
+      <a href="./portrait.html">
         <i id="arrow" class="fas fa-long-arrow-alt-left"></i>Предыдущий альбом
       </a>
-      <a href="./family.html"
+      <a href="./lovestory.html"
         >Следующий альбом <i id="arrow" class="fas fa-long-arrow-alt-right"></i
       ></a>
     </div>
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>
@@ -131,5 +137,9 @@
       </div>
     </footer>
     <script src="./js/effects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 100, delay: 50 });
+    </script>
   </body>
 </html>

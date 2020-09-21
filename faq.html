@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -21,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>About</title>
+    <title>F.A.Q</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -52,10 +53,12 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap" data-aos="fade-up">
+    <div id="nav-wrap" data-aos="fade-in">
       <div class="nav" id="nav">
         <div class="dropdown">
           <a class="dropbtn"> ПОРТФОЛИО</a>
@@ -82,13 +85,17 @@
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/faq.jpg)">
+    <div
+      class="intro-txt"
+      style="background-image: url(./img/faq.jpg)"
+      data-aos="fade-in"
+    >
       <div class="overlay-about">
-        <h2>F.A.Q</h2>
+        <h2 data-aos="fade-up" id="nav-limit">F.A.Q</h2>
       </div>
     </div>
     <div class="Q-A">
-      <div class="case">
+      <div class="case" data-aos="fade-up">
         <h2>Что включают в себя и сколько стоят ваши услуги на свадьбе?</h2>
         <p>
           Подробные тарифы указаны в разделе «Цены». Если ни один из тарифов вам
@@ -97,7 +104,7 @@
           обсудить все детали — место проведения, сроки, бюджет.
         </p>
       </div>
-      <div class="case">
+      <div class="case" data-aos="fade-up">
         <h2>Какое количество фотографий мы получим?</h2>
         <p>
           В среднем за 6 часовую съемку на свадебном торжестве получается от 300
@@ -106,7 +113,7 @@
         </p>
       </div>
 
-      <div class="case">
+      <div class="case" data-aos="fade-up">
         <h2>Как забронировать дату фотосъемки?</h2>
         <p>
           Чтобы забронировать дату, напишите мне в разделе «Контакты» или любым
@@ -114,7 +121,7 @@
           внесения предоплаты, дата съемки будет забронирована за вами.
         </p>
       </div>
-      <div class="case">
+      <div class="case" data-aos="fade-up">
         <h2>Какие камеры вы используете?</h2>
         <p>
           Я использую пленочный фотоаппарат Contax 645 и цифровые камеры Nikon
@@ -122,12 +129,8 @@
           помощью которой получу лучший результат.
         </p>
       </div>
-      <div class="case">
-        <h2></h2>
-        <p></p>
-      </div>
     </div>
-
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>
@@ -154,5 +157,9 @@
       </div>
     </footer>
     <script src="./js/effects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 100, delay: 50 });
+    </script>
   </body>
 </html>

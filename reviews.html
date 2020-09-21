@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -21,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>Reviews</title>
+    <title>Отзывы</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -52,10 +53,12 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap" data-aos="fade-up">
+    <div id="nav-wrap" data-aos="fade-in">
       <div class="nav" id="nav">
         <div class="dropdown">
           <a class="dropbtn"> ПОРТФОЛИО</a>
@@ -82,13 +85,17 @@
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/reviews.jpg)">
+    <div
+      class="intro-txt"
+      style="background-image: url(./img/reviews.jpg)"
+      data-aos="fade-in"
+    >
       <div class="overlay-about">
-        <h2>ОТЗЫВЫ</h2>
+        <h2 data-aos="fade-up">ОТЗЫВЫ</h2>
       </div>
     </div>
-    <div class="comments-box">
-      <div class="comment">
+    <div class="comments-box" id="nav-limit">
+      <div class="comment" data-aos="fade-up">
         <h2>Спасибо за такие замечательные и теплые фото!</h2>
         <h4>ЮЛЯ И МИША</h4>
         <p>
@@ -97,7 +104,7 @@
           портретные снимки наших родителей и друзей ты сделала!
         </p>
       </div>
-      <div class="comment">
+      <div class="comment" data-aos="fade-up">
         <h2>Наша лучшая фотосессия в жизни. Спасибо!</h2>
         <h4>ЛЕНА И МАКСИМ</h4>
         <p>
@@ -107,7 +114,7 @@
           в этот день снова!
         </p>
       </div>
-      <div class="comment">
+      <div class="comment" data-aos="fade-up">
         <h2>Столько приятных эмоций за один день!</h2>
         <h4>ЯНА И АНДРЕЙ</h4>
         <p>
@@ -117,10 +124,10 @@
         </p>
       </div>
     </div>
-    <div class="comment-banner">
+    <div class="comment-banner" data-aos="fade-up">
       <div class="big-comment">
-        <img src="./img/c.jpg" />
-        <h4>АЛЕКСАНДРА</h4>
+        <img src="./img/img-circle.png" />
+        <h4>АЛЁНА</h4>
         <h2>
           Когда Илона отдала нам фотографии, мы даже не ожидали, что они будут
           настолько красивыми, стильными и атмосферными. Не верится, что вся эта
@@ -129,6 +136,7 @@
         </h2>
       </div>
     </div>
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>
@@ -155,5 +163,9 @@
       </div>
     </footer>
     <script src="./js/effects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 100, delay: 50 });
+    </script>
   </body>
 </html>

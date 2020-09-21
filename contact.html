@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Srisakdi&display=swap"
@@ -21,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>About</title>
+    <title>Контакты</title>
   </head>
   <header>
     <div id="myNav" class="overlay">
@@ -52,10 +53,12 @@
     </div>
 
     <div class="head-wrap" data-aos="fade-down">
-      <a href="./index.html"><img src="./img/Elona-logo.png" class="logo" /></a>
+      <a href="./index.html"
+        ><img src="./img/Elona-logo.png" class="logo" id="nav-point"
+      /></a>
       <i class="fas fa-bars" onclick="openNav()" id="menu-btn"> </i>
     </div>
-    <div id="nav-wrap" data-aos="fade-up">
+    <div id="nav-wrap" data-aos="fade-in">
       <div class="nav" id="nav">
         <div class="dropdown">
           <a class="dropbtn"> ПОРТФОЛИО</a>
@@ -82,19 +85,23 @@
     </div>
   </header>
   <body>
-    <div class="intro-txt" style="background-image: url(./img/contact.jpg)">
+    <div
+      class="intro-txt"
+      style="background-image: url(./img/contact.jpg)"
+      data-aos="fade-in"
+    >
       <div class="overlay-about">
-        <h2>Контакты</h2>
+        <h2 data-aos="fade-up">Контакты</h2>
       </div>
     </div>
-    <div class="contact-case">
+    <div class="contact-case" data-aos="fade-up">
       <h2>
         Я всегда открыта новым предложениям и неожиданным путешествиям. Если у
         вас есть идея по фотосъемке — свадебной, love story, портретной,
         свяжитесь со мной любым удобным для вас способом. Я буду рада воплотить
         самую сумасшедшую фотоидею.
       </h2>
-      <div class="box-container">
+      <div class="box-container" id="nav-limit">
         <div class="contact-box">
           <h3><i class="fas fa-envelope"></i> E-mail</h3>
           <h3>eloyna@list.ru</h3>
@@ -102,7 +109,7 @@
 
         <div class="contact-box">
           <h3><i class="fas fa-phone"></i> Phone number</h3>
-          <h3>+8 898 321 34 56</h3>
+          <h3>+375 44 761-18-49</h3>
         </div>
 
         <div class="contact-box">
@@ -111,6 +118,7 @@
         </div>
       </div>
     </div>
+    <a id="nav-up" href="#nav-point"><i class="fas fa-angle-up"></i></a>
     <footer>
       <div>
         <h4>Напишите мне</h4>
@@ -137,5 +145,9 @@
       </div>
     </footer>
     <script src="./js/effects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1400, offset: 200, delay: 50 });
+    </script>
   </body>
 </html>
