@@ -141,6 +141,7 @@
       }
     }
     .text-intro {
+      margin-bottom: -150px;
       #lg-text {
         font-size: 20px;
         width: 85%;
@@ -151,6 +152,9 @@
       }
     }
     .video-bg {
+      visibility: hidden !important;
+      height: 0;
+      margin: 0;
       .overlay-ad {
         flex-direction: column;
         justify-content: center;
@@ -162,12 +166,6 @@
         h2 {
           font-size: 40px;
         }
-      }
-      #anim {
-        visibility: hidden;
-      }
-      #no-anim {
-        visibility: visible !important;
       }
     }
     .offers {
