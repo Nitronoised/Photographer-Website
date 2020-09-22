@@ -718,25 +718,27 @@ body {
     height: 0 !important; }
   body .slideshow-container #img-sm {
     height: auto !important; }
-  body .text-intro #lg-text {
-    font-size: 20px;
-    width: 85%; }
-  body .text-intro img {
-    height: 100px;
-    width: 200px; }
-  body .video-bg .overlay-ad {
-    flex-direction: column;
-    justify-content: center; }
-    body .video-bg .overlay-ad hr {
-      width: 150px;
-      height: 0.1px;
-      margin: 30px auto; }
-    body .video-bg .overlay-ad h2 {
-      font-size: 40px; }
-  body .video-bg #anim {
-    visibility: hidden; }
-  body .video-bg #no-anim {
-    visibility: visible !important; }
+  body .text-intro {
+    margin-bottom: -150px; }
+    body .text-intro #lg-text {
+      font-size: 20px;
+      width: 85%; }
+    body .text-intro img {
+      height: 100px;
+      width: 200px; }
+  body .video-bg {
+    visibility: hidden !important;
+    height: 0;
+    margin: 0; }
+    body .video-bg .overlay-ad {
+      flex-direction: column;
+      justify-content: center; }
+      body .video-bg .overlay-ad hr {
+        width: 150px;
+        height: 0.1px;
+        margin: 30px auto; }
+      body .video-bg .overlay-ad h2 {
+        font-size: 40px; }
   body .offers {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
