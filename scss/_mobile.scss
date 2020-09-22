@@ -155,11 +155,19 @@
         flex-direction: column;
         justify-content: center;
         hr {
-          visibility: hidden;
+          width: 150px;
+          height: 0.1px;
+          margin: 30px auto;
         }
         h2 {
           font-size: 40px;
         }
+      }
+      #anim {
+        visibility: hidden;
+      }
+      #no-anim {
+        visibility: visible !important;
       }
     }
     .offers {
