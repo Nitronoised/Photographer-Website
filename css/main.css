@@ -182,8 +182,8 @@ header {
     cursor: pointer; }
   header .overlay .closebtn {
     position: absolute;
-    top: 5;
-    right: 10px;
+    top: 15px;
+    right: 20px;
     font-size: 40px;
     font-weight: 100;
     color: #494949; }
@@ -376,14 +376,14 @@ body {
     align-items: center;
     margin-top: 100px;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     background-color: #f5f5f5; }
     body footer div {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      height: 15vh; }
+      height: 140px; }
       body footer div .social {
         width: 100px;
         height: 50px;
@@ -407,6 +407,8 @@ body {
         font-size: 14px;
         color: #424242;
         font-weight: 200; }
+    body footer #side-div {
+      height: 70px; }
 
 .image-container {
   display: grid;
@@ -438,10 +440,9 @@ body {
 .intro-txt {
   width: 100%;
   height: 60vh;
-  background-image: url(/dist/img/wedding.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   z-index: 0; }
   .intro-txt .overlay-about {
     height: 100%;
@@ -627,7 +628,7 @@ body {
     .prices-container .prices .vip {
       background-color: #ffe8f7; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   header {
     height: 100px; }
     header .head-wrap {
@@ -640,17 +641,18 @@ body {
       width: 95%;
       margin: 0 auto; }
       header .head-wrap #menu-btn {
-        visibility: visible; }
+        visibility: visible;
+        margin-right: 15px; }
     header #nav-wrap {
       visibility: hidden;
       opacity: 0; }
   body .slideshow-container {
     height: 60vh !important; }
   body .video-bg {
-    background-image: url(../img/d.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; }
+    background-repeat: no-repeat;
+    background-image: url(../img/d.jpg); }
     body .video-bg video {
       visibility: hidden; }
     body .video-bg .overlay-ad {
@@ -716,26 +718,33 @@ body {
     height: 0 !important; }
   body .slideshow-container #img-sm {
     height: auto !important; }
-  body .text-intro h2 {
-    font-size: 0.5;
+  body .text-intro #lg-text {
+    font-size: 20px;
     width: 85%; }
+  body .text-intro img {
+    height: 100px;
+    width: 200px; }
   body .video-bg .overlay-ad {
     flex-direction: column;
     justify-content: center; }
     body .video-bg .overlay-ad hr {
       visibility: hidden; }
+    body .video-bg .overlay-ad h2 {
+      font-size: 40px; }
   body .offers {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr); }
+    grid-template-rows: repeat(1, 1fr);
+    margin: 100px auto; }
     body .offers .offer {
       text-align: center; }
   body .banner {
     margin: 0; }
     body .banner h2 {
       text-align: center;
-      font-size: 25px; }
+      font-size: 20px;
+      width: 90%; }
     body .banner h4 {
-      margin: 30px 0; }
+      margin: 35px 0; }
   body .about-elements {
     width: 85%;
     grid-gap: 50px; }
@@ -770,5 +779,19 @@ body {
       font-size: 15px; }
   body footer {
     flex-direction: column;
-    height: 90vh;
+    height: 70vh;
     margin-top: 10vh; } }
+
+@media screen and (max-width: 365px) {
+  body .text-intro #lg-text {
+    font-size: 15px; }
+  body .text-intro #sm-text {
+    font-size: 13px; }
+  body .video-bg h2 {
+    font-size: 30px; }
+  body .comments-box .comment h2 {
+    font-size: 18px; }
+  body .comment-banner .big-comment h2 {
+    font-size: 20px; }
+  body footer {
+    height: 90vh; } }
