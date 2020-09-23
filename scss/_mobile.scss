@@ -202,18 +202,23 @@
     }
     //--------------------------Reviews----------------
     .comments-box {
-      margin: 100px auto;
+      margin: 50px auto;
       width: 90%;
+      height: 150vh;
       .comment {
         h2 {
           font-size: 25px;
-          width: 80%;
+          width: 90%;
         }
       }
     }
     .comment-banner {
+      height: 100vh;
       .big-comment {
-        height: 55%;
+        height: 65%;
+        h2 {
+          font-size: 25px;
+        }
       }
     }
     //--------------------------Contact---------------
@@ -245,8 +250,8 @@
     }
     footer {
       flex-direction: column;
-      height: 70vh;
-      margin-top: 10vh;
+      height: 80vh;
+      margin-top: 15vh;
     }
   }
 }
@@ -270,12 +275,18 @@
         h2 {
           font-size: 18px;
         }
+        h4 {
+          font-size: 11px;
+        }
+        p {
+          font-size: 10px;
+        }
       }
     }
     .comment-banner {
       .big-comment {
         h2 {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
