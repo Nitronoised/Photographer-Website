@@ -4,6 +4,12 @@
   justify-content: space-evenly;
   align-items: center;
 }
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @mixin fixed-bg($bg) {
   background-image: $bg;
   background-size: cover;

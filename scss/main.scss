@@ -328,9 +328,11 @@ body {
       text-align: left;
       width: 100%;
       display: grid;
+      @include flex-evenly(column);
+      align-items: center;
       img {
         height: auto;
-        width: 100%;
+        width: 80%;
       }
       h4 {
         font-size: 21px;
@@ -403,7 +405,7 @@ body {
   //--------------------------------------Contact-----------------------------------------
   .contact-case {
     width: 85%;
-    margin: 180px auto;
+    margin: 150px auto;
     text-align: center;
 
     .box-container {
@@ -425,7 +427,109 @@ body {
       font-size: 17px;
       letter-spacing: 2px;
     }
+    .line {
+      border-bottom: 1px solid #c2c2c2;
+      width: 100%;
+      margin-bottom: 70px;
+    }
+    .form-title {
+      line-height: 45px;
+      font-weight: 600;
+      color: $secondary-color;
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    #form-btn {
+      width: 100%;
+      @include flex-center;
+      margin: 20px 0;
+    }
+    #submit {
+      font-size: 22px;
+      border-style: none;
+      border-radius: 1px;
+      padding: 12px 22px;
+      margin-top: 15px;
+      transition: 0.3s;
+      color: white;
+      background-color: $secondary-color;
+      &:hover {
+        background-color: #f1c6c6;
+        cursor: pointer;
+        color: $secondary-color;
+      }
+    }
   }
+  #contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "named phone"
+      "date social"
+      "text text";
+    grid-gap: 20px;
+    width: 750px;
+    height: auto;
+    margin: 0 auto;
+
+    label {
+      color: #b8b8b8;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      height: 35px;
+      border-radius: 3px;
+      border: solid 1px #b8b8b8;
+      font-size: 15px;
+      &:focus {
+        outline: none;
+        border: solid 2px $secondary-color;
+      }
+    }
+    .input-name {
+      grid-area: named;
+    }
+    .input-phone {
+      grid-area: phone;
+    }
+    .input-date {
+      grid-area: date;
+    }
+    .input-social {
+      grid-area: social;
+    }
+    .input-text {
+      grid-area: text;
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        border-radius: 3px;
+        border: solid 1px #b8b8b8;
+        resize: none;
+        font-size: 15px;
+
+        &:focus {
+          outline: none;
+          border: solid 2px $secondary-color;
+        }
+      }
+    }
+
+    div {
+      @include flex-evenly(column);
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   //--------------------------------------Footer-----------------------------------------
 
   footer {
@@ -477,7 +581,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
   margin: 60px auto;
-  width: 75%;
+  width: 65%;
   img {
     height: auto;
     width: 100%;
@@ -487,7 +591,7 @@ body {
 .nav-links {
   @include flex-evenly(row);
   justify-content: space-between;
-  width: 75%;
+  width: 65%;
   margin: 0 auto;
   a {
     text-decoration: none;

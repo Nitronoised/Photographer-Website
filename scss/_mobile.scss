@@ -81,6 +81,12 @@
     .box-container {
       flex-direction: column;
       height: 200px;
+      margin: 10px auto !important;
+    }
+
+    #contact-form {
+      width: 100%;
+      margin: 0 auto;
     }
   }
   //--------------------------Reviews----------------
@@ -229,7 +235,26 @@
         height: 400px;
         margin-top: 30px;
       }
+      .box-container {
+        margin: 30px auto;
+      }
+      #contact-form {
+        width: 100%;
+      }
+      #contact-form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+          "named"
+          "phone"
+          "date"
+          "social"
+          "text";
+        textarea {
+          height: 200px;
+        }
+      }
     }
+
     //--------------------------Prices----------------
     .prices-container {
       flex-direction: column;
@@ -241,9 +266,17 @@
         }
       }
     }
-    //--------------------------Portfolio----------------
+    //--------------------------Portfolio---------------
+    .image-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      img {
+        width: 90%;
+      }
+    }
     .nav-links {
-      margin: 0;
+      margin: 0 auto;
+      width: 90%;
       a {
         font-size: 15px;
       }
