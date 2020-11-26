@@ -191,39 +191,47 @@ header {
 body {
   background-color: #ffffff;
   font-family: Calibri; }
-  body .video-bg {
+  body .adv-banner {
+    background-size: cover;
+    background-position: center;
+    background-image: url(/dist/img/faq.jpg);
+    background-repeat: no-repeat;
+    background-image: url(/dist/img/camera-z.jpg);
+    height: 350px;
     width: 100%;
-    height: 80vh;
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
-    body .video-bg video {
+    body .adv-banner .adv-content {
       width: 100%;
-      height: auto; }
-  body .overlay-ad {
-    width: 100%;
-    height: 80%;
-    background-color: #19191988;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; }
-    body .overlay-ad hr {
-      height: 100px; }
-    body .overlay-ad h2 {
-      font-size: 3.9rem;
-      color: #ffffff;
-      font-weight: 200;
-      text-align: center;
-      font-family: "Playfair Display SC", serif; }
-      body .overlay-ad h2 a {
-        color: #ffffff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #0e0e0ea6; }
+      body .adv-banner .adv-content h2 {
+        font-size: 2.2rem;
+        color: #f5f5f5;
+        text-align: center; }
+      body .adv-banner .adv-content h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 30px auto;
+        color: #f5f5f5;
+        width: 450px;
+        text-align: center; }
+      body .adv-banner .adv-content a {
+        font-size: 1.3rem;
+        padding: 10px 15px;
+        background-color: #f1c6c6;
         text-decoration: none;
-        transition: ease 0.3s; }
-        body .overlay-ad h2 a:hover {
-          color: #f1c6c6; }
+        transition: all 0.3s;
+        color: #424242; }
+        body .adv-banner .adv-content a:hover {
+          background-color: #424242;
+          color: #ffffff; }
   body .slideshow-container {
     width: 100%;
     height: 80vh;
@@ -258,7 +266,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100%; }
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; }
     body .text-intro h3 {
       color: #a7a7a7;
       font-size: 12px;
@@ -490,9 +500,9 @@ body {
         height: 100px;
         width: 160px; }
       body footer div h4 {
-        font-size: 14px;
+        font-size: 16px;
         color: #424242;
-        font-weight: 200; }
+        font-weight: 500; }
   body #side-div {
     height: 70px; }
 
@@ -528,6 +538,7 @@ body {
   height: 60vh;
   background-size: cover;
   background-position: center;
+  background-image: url(/dist/img/faq.jpg);
   background-repeat: no-repeat;
   z-index: 0; }
   .intro-txt .overlay-about {
@@ -734,15 +745,6 @@ body {
       opacity: 0; }
   body .slideshow-container {
     height: 60vh !important; }
-  body .video-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../img/d.jpg); }
-    body .video-bg video {
-      visibility: hidden; }
-    body .video-bg .overlay-ad {
-      background-color: #141414a4; }
   body .text-intro h2 {
     width: 85%; }
   body .offers {
@@ -816,19 +818,11 @@ body {
     body .text-intro img {
       height: 100px;
       width: 200px; }
-  body .video-bg {
-    visibility: hidden !important;
-    height: 0;
-    margin: 0; }
-    body .video-bg .overlay-ad {
-      flex-direction: column;
-      justify-content: center; }
-      body .video-bg .overlay-ad hr {
-        width: 150px;
-        height: 0.1px;
-        margin: 30px auto; }
-      body .video-bg .overlay-ad h2 {
-        font-size: 40px; }
+  body .adv-banner .adv-content h2 {
+    font-size: 1.5rem; }
+  body .adv-banner .adv-content h4 {
+    font-size: 1.3rem;
+    width: 250px; }
   body .offers {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);

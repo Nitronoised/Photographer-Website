@@ -21,17 +21,6 @@
     .slideshow-container {
       height: 60vh !important;
     }
-
-    .video-bg {
-      @include norm-bg;
-      background-image: url(../img/d.jpg);
-      video {
-        visibility: hidden;
-      }
-      .overlay-ad {
-        background-color: #141414a4;
-      }
-    }
     .text-intro {
       h2 {
         width: 85%;
@@ -157,20 +146,14 @@
         width: 200px;
       }
     }
-    .video-bg {
-      visibility: hidden !important;
-      height: 0;
-      margin: 0;
-      .overlay-ad {
-        flex-direction: column;
-        justify-content: center;
-        hr {
-          width: 150px;
-          height: 0.1px;
-          margin: 30px auto;
-        }
+    .adv-banner {
+      .adv-content {
         h2 {
-          font-size: 40px;
+          font-size: 1.5rem;
+        }
+        h4 {
+          font-size: 1.3rem;
+          width: 250px;
         }
       }
     }

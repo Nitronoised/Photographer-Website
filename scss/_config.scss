@@ -19,6 +19,7 @@
 @mixin norm-bg {
   background-size: cover;
   background-position: center;
+  background-image: url(/dist/img/faq.jpg);
   background-repeat: no-repeat;
 }
 @mixin debug {
