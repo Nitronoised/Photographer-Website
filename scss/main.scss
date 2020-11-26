@@ -223,7 +223,7 @@ body {
   font-family: Calibri;
   .adv-banner {
     @include norm-bg;
-    background-image: url(/dist/img/camera-z.jpg);
+    background-image: url("../img/camera-z.jpg");
     height: 350px;
     width: 100%;
     @include flex-center;
