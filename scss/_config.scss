@@ -33,7 +33,7 @@
   }
 }
 @mixin mediaSm {
-  @media screen and (max-width: 670px) {
+  @media screen and (max-width: 580px) {
     @content;
   }
 }
