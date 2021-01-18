@@ -1,4 +1,5 @@
-## Photographer-s-website
+## Photographer website
 
-### A responsive photographer's landing page displays info, portfolio of pictures
-### Multiple pages and animations on transitions
+- Responsive photographer's landing page displays info, portfolio of pictures
+- Multiple pages and animations on transitions
+
